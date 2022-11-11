@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.tools.build:gradle:3.6.3'
+//    implementation 'commons-codec:commons-codec:1.9'
+    implementation 'org.apache.httpcomponents:httpclient:4.2.1'
+
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
